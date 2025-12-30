@@ -146,6 +146,10 @@ class Main(App):
         return True
 
     def _apply_file_permissions(self, sources: list, dry_run: bool = False):
+        # Skip permission checks on Windows as it doesn't support Unix-style execute permissions
+        if os.name == 'nt':
+            return True
+        
         execute_permissions = 0o111
         re.compile(SOURCE_CODE_FILE_PATTERN)
         good = []
