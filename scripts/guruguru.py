@@ -17,7 +17,9 @@ class Main(App):
     async def rebuild(self, line):
         self.clearConsole()
         self.logger.info(f"Triggered by: {line}")
-        proc = await asyncio.create_subprocess_exec("./fbt")
+        # Use fbt.cmd on Windows, ./fbt on Unix
+        fbt_cmd = "fbt.cmd" if os.name == 'nt' else "./fbt"
+        proc = await asyncio.create_subprocess_exec(fbt_cmd)
         await proc.wait()
         await asyncio.sleep(1)
         self.is_building = False
