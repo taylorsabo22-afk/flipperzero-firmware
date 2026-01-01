@@ -1,0 +1,29 @@
+{
+    "include_paths": [
+        "furi_hal",
+        "inc"
+    ],
+    "sdk_header_paths": [
+        "../furi_hal_include",
+        "furi_hal"
+    ],
+    "linker_dependencies": [
+        "print",
+        "furi",
+        "freertos",
+        "toolbox",
+        "nfc",
+        "infrared",
+        "assets",
+        "ibutton",
+        "music_worker",
+        "lfrfid",
+        "flipper_application",
+        "u8g2",
+        "nanopb",
+        "heatshrink",
+        "flipperformat",
+        "bit_lib",
+        "datetime"
+    ]
+}
