@@ -90,6 +90,27 @@ Make sure your Flipper is on, and your firmware is functioning. Connect your Fli
 ./fbt flash_usb
 ```
 
+## Android Emulator
+
+Want to run Flipper firmware on Android? Check out the **[Android Emulator](targets/android/)**!
+
+The Android emulator allows you to run Flipper Zero firmware on Android devices (Android 7.0+). Perfect for:
+- 📱 Testing apps without hardware
+- 🎨 UI development and prototyping  
+- 🔧 Learning the firmware architecture
+- 👨‍💻 Contributing to Flipper development
+
+**Quick Start:**
+```bash
+cd targets/android
+# Follow the instructions in targets/android/QUICKSTART.md
+```
+
+For details, see:
+- [Android Emulator README](targets/android/README.md)
+- [Building Guide](targets/android/BUILDING.md)
+- [Development Roadmap](targets/android/ROADMAP.md)
+
 ## Documentation
 
 - [Flipper Build Tool](/documentation/fbt.md) - building, flashing, and debugging Flipper software
