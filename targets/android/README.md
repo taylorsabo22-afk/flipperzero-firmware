@@ -36,7 +36,11 @@ targets/android/
 
 ## Building
 
-### Using Android Studio
+For detailed build instructions, see [BUILDING.md](BUILDING.md).
+
+### Quick Start
+
+Using Android Studio (Recommended):
 
 1. Open the `targets/android` directory in Android Studio
 2. Sync project with Gradle files

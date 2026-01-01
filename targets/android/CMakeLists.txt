@@ -19,6 +19,7 @@ include_directories(
 # HAL source files
 set(HAL_SOURCES
     targets/android/furi_hal/furi_hal.c
+    targets/android/furi_hal/furi_hal_adc.c
     targets/android/furi_hal/furi_hal_bt.c
     targets/android/furi_hal/furi_hal_bus.c
     targets/android/furi_hal/furi_hal_clock.c
@@ -31,6 +32,7 @@ set(HAL_SOURCES
     targets/android/furi_hal/furi_hal_interrupt.c
     targets/android/furi_hal/furi_hal_light.c
     targets/android/furi_hal/furi_hal_memory.c
+    targets/android/furi_hal/furi_hal_mpu.c
     targets/android/furi_hal/furi_hal_os.c
     targets/android/furi_hal/furi_hal_power.c
     targets/android/furi_hal/furi_hal_random.c
@@ -43,8 +45,13 @@ set(HAL_SOURCES
     targets/android/furi_hal/furi_hal_version.c
 )
 
+# JNI bridge
+set(JNI_SOURCES
+    targets/android/app/src/main/cpp/native-lib.cpp
+)
+
 # Create the native library
-add_library(flipper_native SHARED ${HAL_SOURCES})
+add_library(flipper_native SHARED ${HAL_SOURCES} ${JNI_SOURCES})
 
 # Link libraries
 target_link_libraries(flipper_native

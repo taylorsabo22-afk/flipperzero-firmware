@@ -16,6 +16,7 @@ LOCAL_C_INCLUDES := \
 # Source files - HAL layer
 LOCAL_SRC_FILES := \
     targets/android/furi_hal/furi_hal.c \
+    targets/android/furi_hal/furi_hal_adc.c \
     targets/android/furi_hal/furi_hal_bt.c \
     targets/android/furi_hal/furi_hal_bus.c \
     targets/android/furi_hal/furi_hal_clock.c \
@@ -28,6 +29,7 @@ LOCAL_SRC_FILES := \
     targets/android/furi_hal/furi_hal_interrupt.c \
     targets/android/furi_hal/furi_hal_light.c \
     targets/android/furi_hal/furi_hal_memory.c \
+    targets/android/furi_hal/furi_hal_mpu.c \
     targets/android/furi_hal/furi_hal_os.c \
     targets/android/furi_hal/furi_hal_power.c \
     targets/android/furi_hal/furi_hal_random.c \
@@ -37,7 +39,8 @@ LOCAL_SRC_FILES := \
     targets/android/furi_hal/furi_hal_serial_control.c \
     targets/android/furi_hal/furi_hal_speaker.c \
     targets/android/furi_hal/furi_hal_spi_config.c \
-    targets/android/furi_hal/furi_hal_version.c
+    targets/android/furi_hal/furi_hal_version.c \
+    targets/android/app/src/main/cpp/native-lib.cpp
 
 # Libraries to link
 LOCAL_LDLIBS := -llog -landroid
